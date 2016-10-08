@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": "simenb-base",
+  "extends": ["simenb-base", "simenb-flow"],
   "overrides": [
     {
       "files": "test.js",
@@ -19,7 +19,9 @@
           { "devDependencies": true }
         ],
         // Off becuase stuff is generated later
-        "import/no-unresolved": "off"
+        "import/no-unresolved": "off",
+        // Off becuase this shouldn't be linted through flow for readability of example
+        "flowtype/require-valid-file-annotation": "off"
       }
     }
   ],

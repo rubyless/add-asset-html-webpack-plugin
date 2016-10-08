@@ -1,4 +1,7 @@
+// @flow
+
 import globby from 'globby';
+import type { ArrayOfAssetsType } from '../types';
 
 /**
  * handle globby filepath and return an array with all matched assets.
@@ -7,7 +10,9 @@ import globby from 'globby';
  * @param {Array} assets
  * @returns
  */
-export default async function(assets) {
+export default async function(
+  assets: ArrayOfAssetsType
+): Promise<ArrayOfAssetsType> {
   const globbyAssets = [];
   const normalAssets = [];
   // if filepath is null or undefined, just bubble up.

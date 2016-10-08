@@ -8,9 +8,11 @@
           "node": 6
         }
       }
-    ]
+    ],
+    "@babel/preset-flow"
   ],
   "plugins": [
+    "@babel/plugin-proposal-class-properties",
     "add-module-exports",
     ["@babel/plugin-transform-modules-commonjs", { "lazy": true }]
   ]
